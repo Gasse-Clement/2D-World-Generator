@@ -68,7 +68,7 @@ We will use a noise function that will allow us to do this. In 2D
 """
 
 #Name of the output image
-image_filepath = args.name
+image_filepath = "./Images/"+args.name
 
 
 #Writing the parameters for our world
@@ -79,7 +79,7 @@ persistence = args.persistence  #Influences the octaves (how much each octave co
 if(args.seed != 0):
     seed = args.seed
 else :
-    seed = random.randint(0,700) #Seed for the creation map
+    seed = 219 #random.randint(0,700) #Seed for the creation map
 
 #Color of our world
 sea = (66,110,225)
@@ -127,6 +127,8 @@ for x in range(size[0]):
                               )*127.0+128
         set_color(x,y,image,value)        
 image.save(image_filepath)
+
+print(seed)
 
 
 
